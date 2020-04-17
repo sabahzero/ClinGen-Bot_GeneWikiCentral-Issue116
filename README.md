@@ -27,5 +27,5 @@ In this example, we see the last commit by the bot was on October 1, 2019 for th
 - Removal of entries no longer part of database, or with an adjusted Classification status.
 
 ### Contributions and Acknowledgements 
-Python script contributions, in order: Sabah Ul-Hasan, Andra Waagmeester, Andrew Su, Ginger Tsueng </br>
+Python script contributions, in order: [Sabah Ul-Hasan](https://github.com/sabahzero), [Andra Waagmeester](https://github.com/andrawaag), [Andrew Su](https://github.com/andrewsu), [Ginger Tsueng](https://github.com/gtsueng) </br>
 Support: The Scripps Research Institute, National Institute of Health, ClinGen, Wikidata, Github, Jenkins, Jupyter Notebook, Python
