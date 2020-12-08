@@ -1,0 +1,97 @@
+---
+title: "GeneWiki_ClinGen"
+author: "Sabah Ul-Hasan"
+date: "9/18/2019"
+output: html_document
+---
+
+
+```{r}
+
+#### Upload data ####
+# install.packages("RCurl") # Download package for downloading data from GitHub
+library("RCurl") # Call library
+# packageVersion("RCurl") # v1.95.4.12 
+
+# Upload ClinGen variant data 
+ClinGen <- read.csv(text=getURL("https://raw.githubusercontent.com/sabahzero/SuLab/master/ClinGen/ClinGen-Gene-Disease-Summary-2019-09-18.csv")) # Downloaded Sep 18, 2019
+
+
+#### Visualize data ####
+# install.packages("ggplot2") # Download package for visualizing of barcharts
+library(ggplot2)
+# packageVersion("ggplot2") # v3.2.1
+# install.packages("ggpubr") # Download package for publication-quality images
+library(ggpubr)
+# packageVersion("ggpubr") # v0.2.3
+
+# First assessment of gene frequency in dataset *subset for b) < 1, c) < 2
+a_GenePlot <- ggplot(ClinGen, aes(GENE_SYMBOL)) +
+  geom_bar(fill = "#0073C2FF") +
+  theme_pubclean() 
+ggsave("a_GenePlot.png", dpi = 500, width = 4, height = 4) # Save image
+# First assessment of gene frequency in dataset *subset for b) < 1, c) < 20
+a_DiseasePlot <- ggplot(ClinGen, aes(DISEASEID_MONDO)) +
+  geom_bar(fill = "#FFA500") +
+  theme_pubclean()
+ggsave("a_DiseasePlot.png", dpi = 500, width = 4, height = 4)
+
+# Subset data
+# install.packages("plyr") # Download package for data clean-up
+library(plyr)
+# packageVersion("plyr") # v1.8.4
+
+GeneCount <- count(ClinGen, "GENE_SYMBOL") # Frequency by Gene
+# may need to remove quotations, depending on bug
+b_GeneCount <- subset(GeneCount, freq > 1) # 100 show up more than once
+# may need to change freq to n, depending on bug
+b_GenePlot <- ggplot(b_GeneCount, aes(x = GENE_SYMBOL, y = freq)) + 
+  geom_bar(stat="identity", fill = "#0073C2FF") +
+  theme_pubclean() 
+ggsave("b_GenePlot.png", dpi = 500, width = 4, height = 4)
+c_GeneCount <- subset(GeneCount, freq > 2) # 35 of those show up more than twice
+c_GenePlot <- ggplot(c_GeneCount, aes(x = GENE_SYMBOL, y = freq)) + 
+  geom_bar(stat="identity", fill = "#0073C2FF") +
+  theme_pubclean() 
+ggsave("c_GenePlot.png", dpi = 500, width = 4, height = 4)
+
+DiseaseCount <- count(ClinGen, "DISEASEID_MONDO") # Frequency by Disease
+b_DiseaseCount <- subset(DiseaseCount, freq > 1) # 55 show up more than once
+b_DiseasePlot <- ggplot(b_DiseaseCount, aes(x = DISEASEID_MONDO, y = freq)) + 
+  geom_bar(stat="identity", fill = "#FFA500") +
+  theme_pubclean() 
+ggsave("b_DiseasePlot.png", dpi = 500, width = 4, height = 4)
+c_DiseaseCount <- subset(DiseaseCount, freq > 20) # 7 of those more than 20x 
+c_DiseasePlot <- ggplot(c_DiseaseCount, aes(x = DISEASEID_MONDO, y = freq)) + 
+  geom_bar(stat="identity", fill = "#FFA500") +
+  theme_pubclean() 
+ggsave("c_DiseasePlot.png", dpi = 500, width = 4, height = 4)
+
+ComboCount <- ddply(ClinGen, .(GENE_SYMBOL, DISEASEID_MONDO), nrow) # Frequency by combination
+a_ComboCount <- subset(ComboCount, V1 > 1) # 19 combos show up more than once
+a_ComboPlot <- ggplot(a_ComboCount, aes(x = GENE_SYMBOL, y = DISEASEID_MONDO)) +
+  geom_tile(aes(fill = V1), colour = "white") + 
+  scale_fill_gradient(low = "white", high = "#008000") +
+  theme_pubclean() 
+ggsave("a_ComboPlot.png", dpi = 500, width = 4, height = 4)
+
+# Seeing everything altogether
+# install.packages("cowplot") # Download package for pairing figures altogether
+library(cowplot)
+# packageVersion("cowplot") # v1.0.0
+
+plot_grid(a_GenePlot, c_GenePlot, a_DiseasePlot, c_DiseasePlot, labels = c('A', 'B', 'C', 'D'), label_size = 12)
+ggsave("Before-After.png", dpi = 500, width = 3, height = 3)
+
+plot_grid(a_GenePlot, a_DiseasePlot)
+ggsave("A.png", dpi = 500, width = 3, height = 3)
+plot_grid(b_GenePlot, b_DiseasePlot)
+ggsave("B.png", dpi = 500, width = 3, height = 3)
+plot_grid(c_GenePlot, c_DiseasePlot)
+ggsave("C.png", dpi = 500, width = 3, height = 3)
+
+# More things to consider: Subsample or random sampling, outliers, stats on them, etc
+
+```
+
+

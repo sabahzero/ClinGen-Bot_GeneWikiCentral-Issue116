@@ -1,0 +1,20 @@
+,Gene,HGNC Gene ID,Disease,MONDO Disease ID,SOP,Classification,Report Reference URL,Report Date,Definitive,Gene QID,Disease QID,Row
+449,MAX,HGNC:6913,hereditary pheochromocytoma-paraganglioma,MONDO_0017366,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8361,2017-06-22T00:00:00,yes,Q18028904,Q56013982,0
+548,NF1,HGNC:7765,hereditary pheochromocytoma-paraganglioma,MONDO_0017366,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8354,2017-06-22T00:00:00,yes,Q20782771,Q56013982,1
+684,RET,HGNC:9967,hereditary pheochromocytoma-paraganglioma,MONDO_0017366,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8352,2017-06-22T00:00:00,yes,Q18253720,Q56013982,2
+726,SCN8A,HGNC:10596,undetermined early-onset epileptic encephalopathy,MONDO_0018614,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/10066,2017-10-20T00:00:00,yes,Q18031400,Q56014174,3
+730,SDHA,HGNC:10680,hereditary pheochromocytoma-paraganglioma,MONDO_0017366,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8355,2017-06-22T00:00:00,yes,Q14907256,Q56013982,4
+733,SDHAF2,HGNC:26034,hereditary pheochromocytoma-paraganglioma,MONDO_0017366,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8359,2017-06-22T00:00:00,yes,Q18041412,Q56013982,5
+734,SDHB,HGNC:10681,hereditary pheochromocytoma-paraganglioma,MONDO_0017366,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8356,2017-06-22T00:00:00,yes,Q14916125,Q56013982,6
+735,SDHC,HGNC:10682,hereditary pheochromocytoma-paraganglioma,MONDO_0017366,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8357,2017-06-22T00:00:00,yes,Q14864969,Q56013982,7
+736,SDHD,HGNC:10683,hereditary pheochromocytoma-paraganglioma,MONDO_0017366,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8358,2017-06-22T00:00:00,yes,Q14864964,Q56013982,8
+758,SLC25A4,HGNC:10990,mitochondrial DNA depletion syndrome 12,MONDO_0014175,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/10062,false,yes,Q17826544,Q26492823,9
+835,TMEM127,HGNC:26038,hereditary pheochromocytoma-paraganglioma,MONDO_0017366,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8360,2017-06-22T00:00:00,yes,Q18041934,Q56013982,10
+854,TSC1,HGNC:12362,tuberous sclerosis 1,MONDO_0008612,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8750,2017-03-01T00:00:00,yes,Q14908113,Q55998494,11
+856,TSC2,HGNC:12363,tuberous sclerosis 1,MONDO_0008612,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8749,2017-03-08T00:00:00,yes,Q18032199,Q55998494,12
+875,VHL,HGNC:12687,hereditary pheochromocytoma-paraganglioma,MONDO_0017366,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/8353,2017-06-16T00:00:00,yes,Q14905473,Q56013982,13
+101,C1QB,HGNC:1242,C1Q deficiency,MONDO_0013343,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/3216,2017-01-09T00:00:00,yes,Q17854030,Q56002622,14
+265,FH,HGNC:3700,hereditary leiomyomatosis and renal cell cancer,MONDO_0007888,SOP7,Definitive,https://search.clinicalgenome.org/kb/gene-validity/59e42ccd-2b0b-441c-8529-6eb1e9dde330--2020-02-19T22:29:53,2020-02-19T22:29:53.678Z,yes,Q418634,Q3270312,15
+387,KCNT1,HGNC:18865,childhood-onset epilepsy syndrome,MONDO_0020072,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/10053,2017-10-20T00:00:00,yes,Q18043170,Q5382985,16
+478,MTMR2,HGNC:7450,demyelinating hereditary motor and sensory neuropathy,MONDO_0018776,SOP7,Definitive,https://search.clinicalgenome.org/kb/gene-validity/44a837e2-ae06-4e4d-b7cf-ae2a3009b47d--2020-02-11T17:00:00,2020-02-11T17:00:00.000Z,yes,Q18033515,Q55788328,17
+735,SLC25A4,HGNC:10990,mitochondrial DNA depletion syndrome 12,MONDO_0014175,SOP4,Definitive,https://search.clinicalgenome.org/kb/gene-validity/10062,2017-08-30T00:00:00,yes,Q17826544,Q26492823,18
